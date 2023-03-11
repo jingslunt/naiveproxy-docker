@@ -1,0 +1,17 @@
+app = "naiveproxy"
+
+
+[[services]]
+  internal_port = 80
+  protocol = "http"
+
+  [services.concurrency]
+    hard_limit = 250
+    soft_limit = 200
+
+  [[services.ports]]
+    port = "80"
+
+  [[services.tcp_checks]]
+    interval = 10000
+    timeout = 2000
